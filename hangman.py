@@ -1,19 +1,13 @@
 import random
 
-# 1.a
+
 def get_random_country():
     countries = []
     with open('countries-and-capitals.txt', 'r') as file:
         for line in file:
-            # country = ""
-            # for char in line:
-            #     if char == '|':
-            #         break
-            #     country += char
-            # country = country.strip()
             country_and_capital = line.split(' | ')
             countries.append(country_and_capital[0])
-    return random.choice(countries)     
+    return random.choice(countries)
 
 
 def reveal(char, revealed_word, word):
@@ -31,7 +25,6 @@ def get_revealed_word(word):
         else:
             revealed_word.append(' ')
     return revealed_word
-
 
 
 def print_revealed_word(revealed_word):
